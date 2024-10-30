@@ -1,0 +1,31 @@
+.cards {
+  margin: 20px;
+  border: 1px solid black;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.cards div {
+  border: 1px solid blue;
+  height: 250px;
+  width: 250px;
+  cursor: pointer;
+  font-size: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.cards div:hover {
+  border: 1px solid red;
+}
+
+.cards div img {
+  width: 150px;
+  height: 150px;
+}

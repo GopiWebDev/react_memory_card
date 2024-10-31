@@ -17,6 +17,8 @@ import obito from './assets/images/obito.jpg'
 import sasuke from './assets/images/sasuke.jpg'
 import tobirama from './assets/images/tobirama.jpg'
 
+import thumbs from './assets/images/thumbs.gif'
+
 function App() {
   const characters = [
     { name: 'gaara', image: gaara },
@@ -37,6 +39,7 @@ function App() {
   const [result, setResult] = useState([])
   const [bestScore, setBestScore] = useState(0)
   const [array, setArray] = useState(characters)
+  const [showWinImage, setShowWinImage] = useState(false)
 
   useEffect(() => {
     setResult(result)
@@ -45,6 +48,18 @@ function App() {
   useEffect(() => {
     setBestScore(score > bestScore ? score : bestScore)
   }, [score, bestScore])
+
+  useEffect(() => {
+    if (score === 12) {
+      setShowWinImage(true)
+      const resetGame = setTimeout(() => {
+        setScore(0)
+        setResult([])
+        setShowWinImage(false)
+      }, 3000)
+      return () => clearTimeout(resetGame)
+    }
+  }, [score])
 
   const click = (name) => {
     if (!result.includes(name)) {
@@ -60,6 +75,11 @@ function App() {
   return (
     <div className='container min-w-full overflow-hidden'>
       <Header score={score} bestScore={bestScore} setScore={setScore} />
+      {showWinImage && (
+        <div className='fixed inset-0 bg-black bg-opacity-70 flex justify-center items-center z-20'>
+          <img src={thumbs} alt='You Win' className='cursor-pointer md:w-1/2' />
+        </div>
+      )}
       <Main click={click} characters={array} />
       <Footer />
     </div>

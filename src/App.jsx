@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import lodash from 'lodash'
 import Header from './components/Header'
 import Main from './components/Main'
+import Footer from './components/Footer'
 
 import gaara from './assets/images/gaara.jpg'
 import guy from './assets/images/guy.jpg'
@@ -60,6 +61,7 @@ function App() {
     <div className='container min-w-full overflow-hidden'>
       <Header score={score} bestScore={bestScore} setScore={setScore} />
       <Main click={click} characters={array} />
+      <Footer />
     </div>
   )
 }

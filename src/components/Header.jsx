@@ -11,7 +11,7 @@ const Header = ({ score, bestScore }) => {
           className='h-auto w-[7rem] aspect-[16/10] lg:w-[12rem] md:w-[10rem] sm:w-[10rem]'
         />
         <p className='score'>
-          SCORE: <span>{score}</span>
+          SCORE: <span className='text-gray-600'>{score}</span>
         </p>
         <p className='score'>
           BEST SCORE: <span>{bestScore}</span>

@@ -25,10 +25,6 @@
     @apply font-bebas text-[clamp(1.15rem,0.1428571428571428rem+4.285714285714286vw,4rem)] text-gray-800;
   }
 
-  .score span {
-    @apply text-black;
-  }
-
   .grid-section {
     @apply grid grid-cols-1 justify-items-center gap-x-4 gap-y-5 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2;
   }

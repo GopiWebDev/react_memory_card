@@ -4,7 +4,7 @@ Welcome to the **Naruto Memory Game**! This is a fun and simple memory game insp
 
 ## Live Demo
 
-[Play the Naruto Memory Game here!](https://url.com)
+[Play the Naruto Memory Game here!](https://naruto-memory.vercel.app/)
 
 ## Game Rules
 

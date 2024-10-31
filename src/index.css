@@ -1,3 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @font-face {
+    font-family: 'bebas';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(./assets/fonts/bebas.woff2) format('woff2');
+  }
+}
+
+@layer components {
+  .wrapper {
+    @apply max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-20;
+  }
+
+  .score {
+    @apply font-bebas text-[clamp(1.5rem,0.1428571428571428rem+4.285714285714286vw,4rem)] text-gray-800;
+  }
+  .score span {
+    @apply text-black;
+  }
+}
+
+/* * {
+  padding: 0;
+  margin: 0;
+}
+
 .cards {
   margin: 20px;
   border: 1px solid black;
@@ -29,3 +61,11 @@
   width: 150px;
   height: 150px;
 }
+
+.main-div {
+  background-image: url('./assets/images/background_image.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+} */
